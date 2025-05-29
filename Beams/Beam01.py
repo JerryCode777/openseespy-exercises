@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 m = 1
 kg = 1
 s = 1
-
 # otras unidades
 N = kg*m/s**2
 cm = 0.01*m
@@ -43,7 +42,7 @@ jxx = beta*bb**3*aa
 print('E_mod:',E_mod)
 
 ops.geomTransf('Linear', 1, *[0,1,0])
-ops.geomTransf('Linear', 2, *[0,0,-1])
+ops.geomTransf('Linear', 2, *[-1,0,0])
 
 ops.element('elasticBeamColumn', 1, 1, 2, Area, E_mod, G_mod, jxx, Iy, Iz, 1)
 ops.element('elasticBeamColumn', 2, 3, 2, Area, E_mod, G_mod, jxx, Iy, Iz, 1)
