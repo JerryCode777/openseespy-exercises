@@ -9,6 +9,7 @@ s = 1
 
 #otras unidades 
 N = kg/m*s**2
+kgf = 9.81 * N
 cm = 0.01 
 Pa = N/m**2
 MPa = 10e6 * Pa
@@ -47,6 +48,10 @@ vis.plot_model(fig_wi_he=(20., 15.))
 plt.show()
 
 
+#asignacion de fuerzas para el analisis estructural
+ops.timeSeries('Linear', 1)
+ops.pattern('Plain', 1, 1)
+ops.load(2,0., -1000*kgf,0,0,0,0,0)
 
 
 
